@@ -1,13 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 import { StatusBar } from 'expo-status-bar';
+import Map from "../components/Map";
 
 export default function MapScreen() {
 	return (
-		<SafeAreaView style={[tw`bg-white h-full`, styles.container]}>
+		<View style={styles.container}>
 			<StatusBar style="auto" />
-		</SafeAreaView>
+			<View style={tw`h-1/2`}>
+				<Map />
+			</View>
+			<View style={tw`h-1/2`}></View>
+		</View>
 	);
 }
 
